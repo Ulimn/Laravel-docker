@@ -13,6 +13,8 @@ WORKDIR /var/www/
 
 COPY custom.apache.conf /etc/apache2/sites-enabled/custom.apache.conf
 
+RUN sed -i 's/SERVERNAME_HERE/${APACHE_SERVER_NAME}/g' /etc/apache2/sites-enabled/custom.apache.conf
+
 ENTRYPOINT ["/opt/docker/bin/entrypoint.sh"]
 
 CMD ["supervisord"]

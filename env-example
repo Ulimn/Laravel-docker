@@ -27,6 +27,7 @@ PHP_EXT_INTL=true
 # Apache2 container variables
 APACHE_HTTP_PORT=8080
 APACHE_DOCUMENT_ROOT=/var/www/public
+APACHE_SERVER_NAME=laravel.local
 
 # MariaDB container variables
 MARIADB_DATABASE=default
